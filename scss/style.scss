@@ -55,6 +55,10 @@ header {
   background: url(../img/header_bg.svg) no-repeat center center/cover;
   background-attachment: fixed;
 
+  .hide {
+    transform: translateY(-80px);
+  }
+
   #branding {
     position: fixed;
     width: 100%;
@@ -62,6 +66,7 @@ header {
     padding: 20px 10px;
     background-color: $transparent-light;
     z-index: 1;
+    @include easeOut;
 
     img {
       width: 120px;
@@ -152,5 +157,44 @@ main {
     height: 100vh;
     background: url(../img/form_bg.svg) no-repeat center center/cover;
     background-attachment: fixed;
+  }
+}
+
+footer {
+  box-sizing: border-box;
+
+  article {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-blue;
+
+    section {
+      width: 80%;
+      margin: 10px auto;
+
+      h3 {
+        color: $primary-light;
+        text-align: center;
+      }
+
+      li {
+        padding: 5px;
+        border-bottom: 1px solid $primary-light;
+
+        a {
+          color: $primary-light;
+          font-size: 16px;
+          text-transform: uppercase;
+          @include easeOut;
+
+          &:hover {
+            color: $secondary-orange;
+          }
+        }
+      }
+    }
   }
 }
