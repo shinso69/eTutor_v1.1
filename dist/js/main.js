@@ -23,3 +23,43 @@ window.addEventListener("scroll", () => {
     branding.classList.remove("hide");
   }
 });
+
+// Cta Button functionality -scroll to contact form
+const ctaButton = document.querySelector("#cta_button");
+const contactForm = document.querySelector("#contact");
+
+ctaButton.addEventListener("click", () => {
+  contactForm.scrollIntoView();
+});
+
+// Section elements slide into view
+
+(() => {
+  let sections;
+  let windowHeight;
+
+  init = () => {
+    sections = document.querySelectorAll(".hidden");
+    windowHeight = window.innerHeight;
+  };
+
+  checkPosition = () => {
+    sections.forEach(section => {
+      let positionFromTop = section.getBoundingClientRect().top;
+
+      if (positionFromTop - windowHeight <= 0) {
+        section.classList.add("section_show");
+        section.classList.remove("hidden");
+      } else {
+        section.classList.add("hidden");
+        section.classList.remove("section_show");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", checkPosition);
+  window.addEventListener("resize", init);
+
+  init();
+  checkPosition();
+})();

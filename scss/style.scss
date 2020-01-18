@@ -98,6 +98,15 @@ header {
 main {
   box-sizing: border-box;
 
+  .hidden {
+    transform: translateX(-100vw);
+  }
+
+  .section_show {
+    transform: translateX(0);
+    @include smoothChange;
+  }
+
   article {
     width: 100vw;
     display: flex;

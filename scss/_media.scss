@@ -1,5 +1,11 @@
 @include mediaLg {
   body {
+    header {
+      #branding {
+        padding: 20px 30px !important;
+      }
+    }
+
     main {
       article {
         section {
