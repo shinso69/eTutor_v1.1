@@ -11,7 +11,10 @@
 html,
 body {
   font-family: "Lato", sans-serif;
-  margin: 0 15px;
+  width: 98%;
+  margin: 10px auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
 
   h1 {
     font-size: 28px;
@@ -19,17 +22,18 @@ body {
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 20px;
     color: $primary-blue;
+    font-weight: 400;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 18px;
     color: $primary-orange;
   }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     color: $primary-blue;
   }
 
@@ -44,5 +48,7 @@ body {
 }
 
 header {
-  margin-top: 20px;
+  img {
+    width: 120px;
+  }
 }

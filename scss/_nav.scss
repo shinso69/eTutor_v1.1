@@ -1,6 +1,70 @@
-// Mobile nav with Hamburger Menu
-@media screen and (max-width: 414px) {
-  nav {
+// Hamburger Menu
+nav {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: rgba(255, 255, 255, 0.93);
+  z-index: 1;
+  @include smoothChange;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    grid-column: 2 / span 1;
+    text-align: center;
+    box-sizing: border-box;
+
+    li {
+      margin: 40px;
+
+      a {
+        text-transform: uppercase;
+        font-size: 24px;
+
+        &:active {
+          color: $primary-orange;
+        }
+      }
+    }
+  }
+
+  #menu_icon {
+    width: 25px;
+    height: 20px;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    cursor: pointer;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .line {
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background-color: $primary-orange;
+      @include smoothChange;
+    }
+  }
+}
+
+.nav_show {
+  right: 0;
+
+  .line_1 {
+    transform: rotateZ(-405deg) translate(-3px, 5px);
+  }
+
+  .line_2 {
+    opacity: 0;
+  }
+
+  .line_3 {
+    transform: rotateZ(405deg) translate(-4px, -6px);
   }
 }
