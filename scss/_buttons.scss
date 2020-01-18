@@ -5,6 +5,7 @@
   background-color: $primary-blue;
   color: $primary-light;
   font-size: 18px;
+  cursor: pointer;
 
   &:hover {
     background-color: $primary-orange;
@@ -18,4 +19,15 @@
 
 .btn_large {
   width: 400px;
+}
+
+.btn_form {
+  background-color: transparent;
+  border: 1px solid $primary-orange;
+  color: $primary-orange;
+
+  &:hover {
+    background-color: $primary-orange;
+    color: $primary-light;
+  }
 }

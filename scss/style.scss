@@ -2,6 +2,7 @@
 @import "config";
 @import "nav";
 @import "buttons";
+@import "form";
 
 // Global -Styles
 * {
@@ -14,6 +15,7 @@ body {
   font-family: "Lato", sans-serif;
   box-sizing: border-box;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 
   h1 {
     font-size: 30px;
@@ -51,6 +53,7 @@ header {
   width: 100vw;
   box-sizing: border-box;
   background: url(../img/header_bg.svg) no-repeat center center/cover;
+  background-attachment: fixed;
 
   #branding {
     position: fixed;
@@ -83,5 +86,71 @@ header {
       margin-bottom: 15px;
       color: $primary-orange;
     }
+  }
+}
+
+main {
+  box-sizing: border-box;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #advertisment {
+    height: 50vh;
+    background-color: $secondary-blue;
+
+    h3 {
+      margin-bottom: 30px;
+      color: $primary-light;
+    }
+
+    p {
+      margin-bottom: 10px;
+      color: $primary-light;
+      text-indent: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  #services {
+    height: 100vh;
+    background: url(../img/services_bg.svg) no-repeat center center/cover;
+    background-attachment: fixed;
+
+    h2 {
+      width: 80%;
+      margin: 40px auto 20px auto;
+    }
+
+    section {
+      width: 80%;
+      margin: 15px auto;
+    }
+  }
+
+  #about {
+    height: 100vh;
+
+    section {
+      width: 80%;
+      margin: 15px auto;
+      padding: 20px;
+
+      h2 {
+        margin-bottom: 10px;
+        color: $primary-orange;
+      }
+    }
+  }
+
+  #contact {
+    height: 100vh;
+    background: url(../img/form_bg.svg) no-repeat center center/cover;
+    background-attachment: fixed;
   }
 }
