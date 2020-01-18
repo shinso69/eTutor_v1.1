@@ -1,0 +1,59 @@
+@include mediaLg {
+  body {
+    main {
+      article {
+        section {
+          width: 50% !important;
+        }
+      }
+
+      #advertisment {
+        h3 {
+          font-size: 22px !important;
+        }
+
+        p {
+          font-size: 20px !important;
+        }
+      }
+
+      #services {
+        h2 {
+          width: 50% !important;
+        }
+      }
+
+      #contact {
+        section {
+          width: 30% !important;
+        }
+      }
+    }
+
+    footer {
+      section {
+        width: 40% !important;
+      }
+    }
+  }
+}
+
+@include mediaXl {
+  body {
+    h1 {
+      font-size: 34px !important;
+    }
+
+    h2 {
+      font-size: 24px !important;
+    }
+
+    h3 {
+      font-size: 22px !important;
+    }
+
+    p {
+      font-size: 20px !important;
+    }
+  }
+}

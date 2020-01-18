@@ -18,14 +18,14 @@
 }
 
 .btn_large {
-  width: 400px;
+  width: 350px;
 }
 
 .btn_form {
   background-color: transparent;
   border: 1px solid $primary-orange;
   color: $primary-orange;
-  width: 350px;
+  width: calc(90%);
 
   &:hover {
     background-color: $primary-orange;

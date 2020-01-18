@@ -25,3 +25,16 @@ $transparent-light: rgba(255, 255, 255, 0.93);
 @mixin btnHover {
   transition: all 0.4s ease-in-out;
 }
+
+// Media Queries
+@mixin mediaLg {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1281px) {
+    @content;
+  }
+}

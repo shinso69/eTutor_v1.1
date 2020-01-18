@@ -3,6 +3,7 @@
 @import "nav";
 @import "buttons";
 @import "form";
+@import "media";
 
 // Global -Styles
 * {
@@ -98,6 +99,7 @@ main {
   box-sizing: border-box;
 
   article {
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,17 +110,21 @@ main {
     height: 50vh;
     background-color: $secondary-blue;
 
-    h3 {
-      margin-bottom: 30px;
-      color: $primary-light;
-    }
+    section {
+      width: fit-content !important;
 
-    p {
-      margin-bottom: 10px;
-      color: $primary-light;
-      text-indent: 10px;
-      font-size: 16px;
-      font-weight: bold;
+      h3 {
+        margin-bottom: 30px;
+        color: $primary-light;
+      }
+
+      p {
+        margin-bottom: 10px;
+        color: $primary-light;
+        text-indent: 10px;
+        font-size: 16px;
+        font-weight: bold;
+      }
     }
   }
 
@@ -157,6 +163,11 @@ main {
     height: 100vh;
     background: url(../img/form_bg.svg) no-repeat center center/cover;
     background-attachment: fixed;
+
+    section {
+      width: 80%;
+      margin: 10px auto;
+    }
   }
 }
 

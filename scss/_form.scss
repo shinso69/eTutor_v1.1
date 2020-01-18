@@ -1,44 +1,38 @@
 form {
-  fieldset {
-    border: none;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    legend {
-      margin-bottom: 30px;
-      font-size: 24px;
-      color: $primary-blue;
+  legend {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: $primary-blue;
+    align-self: flex-start;
+  }
+
+  label {
+    color: $primary-blue;
+    align-self: flex-start;
+  }
+
+  input,
+  textarea {
+    width: calc(90%);
+    border-radius: 15px;
+    border: 1px solid $primary-orange;
+    padding: 10px;
+    margin: 10px auto 20px auto;
+    font-size: 14px;
+    color: $primary-blue;
+
+    &:focus {
+      outline: none;
     }
+  }
 
-    label {
-      margin-bottom: 10px;
-    }
-
-    label,
-    input,
-    button {
-      display: block;
-    }
-
-    input,
-    textarea {
-      width: 350px;
-      border-radius: 15px;
-      border: 1px solid $primary-orange;
-      padding: 10px;
-      margin-bottom: 20px;
-      font-size: 14px;
-      color: $primary-blue;
-
-      &:focus {
-        outline: none;
-      }
-    }
-
-    textarea {
-      resize: none;
-    }
-
-    button {
-      margin: auto;
-    }
+  textarea {
+    resize: none;
   }
 }
