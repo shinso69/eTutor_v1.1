@@ -1,6 +1,7 @@
 // Imports
 @import "config";
 @import "nav";
+@import "buttons";
 
 // Global -Styles
 * {
@@ -11,13 +12,11 @@
 html,
 body {
   font-family: "Lato", sans-serif;
-  width: 98%;
-  margin: 10px auto;
   box-sizing: border-box;
   overflow-x: hidden;
 
   h1 {
-    font-size: 28px;
+    font-size: 30px;
     color: $primary-blue;
   }
 
@@ -48,7 +47,41 @@ body {
 }
 
 header {
-  img {
-    width: 120px;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  background: url(../img/header_bg.svg) no-repeat center center/cover;
+
+  #branding {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 20px 10px;
+    background-color: $transparent-light;
+    z-index: 1;
+
+    img {
+      width: 120px;
+    }
+  }
+
+  section {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: $primary-orange;
+    }
   }
 }

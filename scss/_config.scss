@@ -7,12 +7,17 @@ $primary-orange: #db5024;
 $secondary-blue: lighten($primary-blue, 20);
 $secondary-orange: lighten($primary-orange, 20);
 $primary-light: #ffffff;
+$transparent-light: rgba(255, 255, 255, 0.93);
 
 // Transition Mixins
 @mixin flash {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in;
 }
 
 @mixin smoothChange {
   transition: all 0.8s;
+}
+
+@mixin btnHover {
+  transition: all 0.4s ease-out;
 }

@@ -1,0 +1,21 @@
+.btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: $primary-blue;
+  color: $primary-light;
+  font-size: 18px;
+
+  &:hover {
+    background-color: $primary-orange;
+    @include btnHover;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn_large {
+  width: 400px;
+}
