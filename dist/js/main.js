@@ -65,13 +65,3 @@ ctaButton.addEventListener("click", () => {
 })();
 
 // Form Validation
-const eMail = document.querySelector("#email");
-let emailValid = eMail.checkValidity(false);
-
-clear = () => {
-  if (emailValid) {
-    eMail.value = "";
-  }
-};
-
-eMail.addEventListener("focusout", clear);
