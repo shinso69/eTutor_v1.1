@@ -122,38 +122,46 @@
         <section>
           <form action="#">
             
-              <legend>Ponte en Contacto</legend>
+              <legend class="hidden">Ponte en Contacto</legend>
               
-                <label for="name">
-                  <span>Nombre:</span>
-                  <strong><abbr title="requerido">*</abbr></strong>
-                </label>
-                <input
-                  id="name"
-                  type="name"
-                  name="nombre"
-                  placeholder="Tu Nombre y Apellidos"
-                ></input>
+                <div class="user_name hidden">
+                  
+                  <input
+                    id="name"
+                    type="name"
+                    name="nombre"
+                   autocomplete="off" required
+                  ></input>
+                  <label for="name">
+                    <span>Nombre:</span>
               
-  
-              
-                <label for="email">
-                  <span>E-mail:</span>
-                  <strong><abbr title="requerido">*</abbr></strong>
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="Tu correo electronico"
-                ></input>
+                  </label>
+                </div>
               
   
               
-                <label for="msg">
-                  <span>Mensaje</span>
-                  <stron><abbr title="requerido">*</abbr></stron>
-                </label>
-                <textarea name="mensaje" id="msg" cols="30" rows="10">Tu mensaje</textarea>
+                <div class="user_email hidden">
+                  
+                  <input
+                    id="email"
+                    type="email"
+                    autocomplete="off" required
+                  ></input>
+                  <label for="email">
+                    <span>E-mail:</span>
+                    
+                  </label>
+                </div>
+              
+  
+              
+                <div class="user_msg hidden">
+                  <textarea name="mensaje" id="msg" cols="30" rows="10"></textarea>
+                  <label for="msg" id="textarea_label">
+                    <span>Mensaje:</span>
+                    
+                  </label>
+                </div>
               
               <button type="submit" class="btn btn_large btn_form">Enviar</button>
           

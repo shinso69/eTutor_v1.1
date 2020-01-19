@@ -1,0 +1,166 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  legend {
+    font-size: 20px;
+    font-weight: bold;
+    color: $primary-orange;
+    justify-self: flex-start;
+    align-self: flex-start;
+  }
+
+  .user_name,
+  .user_email {
+    margin-top: 20px;
+    justify-self: flex-start;
+  }
+
+  .user_name,
+  .user_email {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    box-sizing: border-box;
+
+    span {
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      color: $primary-blue;
+      font-size: 16px;
+      font-weight: bold;
+      @include easeOut;
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: $primary-blue;
+    font-size: 16px;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input {
+    padding-top: 14px;
+  }
+
+  label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid $primary-blue;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2;
+      width: 100%;
+      height: 100%;
+      border-bottom: 3px solid $primary-orange;
+      transform: scaleX(0);
+      transform-origin: left;
+      @include easeOut;
+    }
+  }
+
+  input:focus + label span,
+  input:valid + label span {
+    transform: translateY(-150%);
+    color: $primary-orange;
+  }
+
+  input:focus + label::after,
+  input:valid + label::after {
+    transform: scaleX(1);
+  }
+
+  button {
+    margin-top: 60px;
+  }
+
+  //   Message
+  .user_msg {
+    margin-top: 70px;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    box-sizing: border-box;
+
+    textarea {
+      width: 100%;
+      height: 100%;
+      border: none;
+      color: $primary-blue;
+      font-size: 16px;
+      background-color: transparent;
+      resize: none;
+      outline: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 20%;
+      pointer-events: none;
+      border-bottom: 1px solid $primary-blue;
+      @include easeOut;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2;
+        width: 100%;
+        height: 100%;
+        border-bottom: 3px solid $primary-orange;
+        transform: scaleX(0);
+        transform-origin: left;
+        @include easeDelayed;
+      }
+    }
+
+    span {
+      position: absolute;
+      top: -5px;
+      left: 0;
+      color: $primary-blue;
+      font-size: 16px;
+      font-weight: bold;
+      @include easeOut;
+    }
+
+    textarea:focus + label span,
+    textarea:valid + label span {
+      transform: translateY(-15px);
+      color: $primary-orange;
+    }
+
+    textarea:focus + label,
+    textarea:valid + label {
+      height: 100%;
+    }
+
+    textarea:focus + label::after {
+      transform: scaleX(1);
+    }
+  }
+}

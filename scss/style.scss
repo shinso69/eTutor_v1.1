@@ -2,7 +2,8 @@
 @import "config";
 @import "nav";
 @import "buttons";
-@import "form";
+@import "aniform";
+// @import "form";
 @import "media";
 
 // Global -Styles
@@ -176,6 +177,7 @@ main {
     section {
       width: 80%;
       margin: 10px auto;
+      height: 100%;
     }
   }
 }
