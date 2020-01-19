@@ -33,3 +33,13 @@
     color: $primary-light;
   }
 }
+
+.btn_form:disabled {
+  color: #888888;
+  border-color: #888888;
+  pointer-events: none;
+
+  &:hover {
+    background-color: transparent;
+  }
+}

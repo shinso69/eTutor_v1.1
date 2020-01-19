@@ -65,3 +65,36 @@ ctaButton.addEventListener("click", () => {
 })();
 
 // Form Validation
+const nameField = document.querySelector("#name");
+const emailField = document.querySelector("#email");
+const msgField = document.querySelector("#msg");
+const formBtn = document.querySelector(".btn_form");
+const regEx = /\S+@\S+\.\S+/;
+
+validateForm = () => {
+  if (
+    nameField.value.trim() !== "" &&
+    regEx.test(emailField.value) &&
+    msgField.value.trim() !== ""
+  ) {
+    formBtn.disabled = false;
+    msgField.classList.add("has_content");
+  } else {
+    formBtn.disabled = true;
+    msgField.classList.remove("has_content");
+    emailField.style.color = "transparent";
+  }
+};
+
+msgField.addEventListener("focus", validateForm);
+nameField.addEventListener("focus", validateForm);
+emailField.addEventListener("focus", validateForm);
+msgField.addEventListener("click", validateForm);
+nameField.addEventListener("click", validateForm);
+emailField.addEventListener("click", validateForm);
+msgField.addEventListener("focusout", validateForm);
+nameField.addEventListener("focusout", validateForm);
+emailField.addEventListener("focusout", validateForm);
+msgField.addEventListener("mouseleave", validateForm);
+nameField.addEventListener("mouseleave", validateForm);
+emailField.addEventListener("mouseleave", validateForm);

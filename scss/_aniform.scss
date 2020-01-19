@@ -148,18 +148,29 @@ form {
       @include easeOut;
     }
 
-    textarea:focus + label span,
-    textarea:valid + label span {
+    textarea:focus + label span {
       transform: translateY(-15px);
       color: $primary-orange;
     }
 
-    textarea:focus + label,
-    textarea:valid + label {
+    textarea:focus + label {
       height: 100%;
     }
 
     textarea:focus + label::after {
+      transform: scaleX(1);
+    }
+
+    .has_content:valid + label span {
+      transform: translateY(-15px);
+      color: $primary-orange;
+    }
+
+    .has_content:valid + label {
+      height: 100%;
+    }
+
+    .has_content:valid + label::after {
       transform: scaleX(1);
     }
   }
